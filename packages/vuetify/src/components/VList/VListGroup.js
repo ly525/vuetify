@@ -176,7 +176,8 @@ export default {
       this.isActive = this._uid === uid
     },
     /**
-     * to: '/offers/list', this.group: 'offers' =>  return true
+     * to 相关配置在路由中，group 配置在 menu.js。因此需要思考：是否可以统一由 路由 来生成 侧边栏
+     * to: '/users/list', this.group: 'users' =>  return true
      */
     matchRoute (to) {
       if (!this.group) return false
