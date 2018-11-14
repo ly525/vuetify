@@ -72,13 +72,13 @@ export default {
     $route (to) {
       /**
        * to => 
-        fullPath: "/offers/list"
+        fullPath: "/users/list"
         hash: ""
         matched: (2) [{…}, {…}]
         meta: {}
-        name: "components/offers/list"
+        name: "components/users/list"
         params: {}
-        path: "/offers/list"
+        path: "/users/list"
         query: {}
        */
       const isActive = this.matchRoute(to.path)
