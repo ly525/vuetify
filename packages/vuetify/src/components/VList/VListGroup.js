@@ -70,6 +70,17 @@ export default {
       }
     },
     $route (to) {
+      /**
+       * to => 
+        fullPath: "/offers/list"
+        hash: ""
+        matched: (2) [{…}, {…}]
+        meta: {}
+        name: "components/offers/list"
+        params: {}
+        path: "/offers/list"
+        query: {}
+       */
       const isActive = this.matchRoute(to.path)
 
       if (this.group) {
@@ -161,8 +172,12 @@ export default {
       ])
     },
     toggle (uid) {
+      // TODO 这里的 uid 是什么？
       this.isActive = this._uid === uid
     },
+    /**
+     * to: '/offers/list', this.group: 'offers' =>  return true
+     */
     matchRoute (to) {
       if (!this.group) return false
       return to.match(this.group) !== null
